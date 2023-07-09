@@ -28,7 +28,6 @@ class Cliente(models.Model):
 class Cilindro(models.Model):
     # Atributos del modelo
     codigo = models.CharField(max_length=50)
-    tipo = models.CharField(max_length=50)
     capacidad = models.IntegerField()
     # Otros campos y relaciones
 
