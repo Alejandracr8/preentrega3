@@ -1,0 +1,19 @@
+{% extends 'HOME/base.html' %}
+
+{% block TITULO %}
+    <h1>Crear Cilindro</h1>
+{% endblock TITULO %}
+
+{% block CONTENIDO %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.Cilindro.label.tag }} {{ form.Cilindro}}
+        {{ form.BodegaProveedor.label.tag}} {{ form.BodegaProveedor}}
+        {{ form.BodegaPrincipal.label.tag}} {{ form.BodegaPrincipal}}
+        {{ form.Cliente.label.tag}} {{ form.Cliente}}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <a href="{% url 'HOME/base'%}"></a>
+{% endblock CONTENIDO %}
+

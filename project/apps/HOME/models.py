@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Cilindro(models.Model):
-    # Atributos del modelo
     codigo = models.CharField(max_length=50)
     capacidad = models.IntegerField()
+
     
 
     def __str__(self):
@@ -26,9 +26,10 @@ class BodegaPrincipal(models.Model):
     direccion = models.CharField(max_length=200)
     codigo_cilindro = models.ForeignKey(Cilindro, on_delete=models.SET_NULL, null=True)
     
-
+    
     def __str__(self):
         return self.nombre
+    
 class Cliente(models.Model):
     # Atributos del modelo
     nombre = models.CharField(max_length=100)
