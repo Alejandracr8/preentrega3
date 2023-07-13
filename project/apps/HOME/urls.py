@@ -7,9 +7,9 @@ app_name = 'HOME'
 urlpatterns = [
     path('', views.index, name='index'),
     path('registro_de_cilindros/',home, name='registro'  ),
-    path('crear/', crear_cilindro, name='Crear Cilindro'),
-    path('BodegaP/', crear_BodegaPrincipal, name='crear Bodega'),
-    path('BodegaPro/', crear_BodegaProveedor, name='crear Bodega Proveedor'),
-    path('crear cliente/', crear_cliente, name='crear cliente')
+    path('crear/', crear_cilindro, name='crear_Cilindro'),
+    path('BodegaP/', crear_BodegaPrincipal, name='crear_Bodega'),
+    path('BodegaPro/', crear_BodegaProveedor, name='crear_Bodega_Proveedor'),
+    path('crear_cliente/', crear_cliente, name='crear_cliente')
    
 ]
