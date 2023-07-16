@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>control de cilindros Escogas</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
 
-    {% block TITULO %}
-        CONTROL DE CILINDROS ESCOGAS
-    {% endblock TITULO %}
+        <h1 style="color:blue">
+            {% block TITULO %}
+                CONTROL DE CILINDROS ESCOGAS
+            {% endblock TITULO %}
+        </h1>
+        <div style="text-align: center; font-size: xx-large;">
+            {% block CONTENIDO %}
+            {% endblock CONTENIDO %}
+        </div>
 
-    {% block CONTENIDO %}
-        Registro de clientes 
-        Registro de bodegas 
-        {% endblock CONTENIDO %}
-</body>
+    </body>
 </html>

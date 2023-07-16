@@ -1,21 +1,43 @@
 {% extends 'HOME/base.html' %}
 
 {% block TITULO %}
-    <h1>Crear Cilindro</h1>
+    <h1>CREAR CILINDRO</h1>
 {% endblock TITULO %}
-
+<div style="text-align: center; font-size: xx-large;">
 {% block CONTENIDO %}
-<p>Hola</p>
-    <form method="post">
+<p>INGRESE LOS DATOS DEL CILINDRO</p>
+    <form method="post" 
         {% csrf_token %}
         {{ form.as_p }}
         {{ form.Cilindro.label.tag }} {{ form.Cilindro}}
-        {{ form.BodegaProveedor.label.tag}} {{ form.BodegaProveedor}}
-        {{ form.BodegaPrincipal.label.tag}} {{ form.BodegaPrincipal}}
-        {{ form.Cliente.label.tag}} {{ form.Cliente}}
         <button type="submit">Guardar</button>
     </form>
 
+    <p>INGRESE LOS DATOS DE LA BODEGA PROVEEDOR</p>
+    <form method="post" 
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.BodegaProveedor.label.tag}} {{ form.BodegaProveedor}}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <p>INGRESE LOS DATOS DE LA BODEGA PRINCIPAL</p>
+    <form method="post" 
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.BodegaPrincipal.label.tag}} {{ form.BodegaPrincipal}}
+        <button type="submit">Guardar</button>
+    </form>
+
+    <p>INGRESE LOS DATOS DE BODEGA CLIENTE</p>
+    <form method="post" 
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.Cliente.label.tag}} {{ form.Cliente}}
+        <button type="submit">Guardar</button>
+    </form>
+</div>
     <a href="{% url 'HOME:index'%}"></a>
+
 {% endblock CONTENIDO %}
 
